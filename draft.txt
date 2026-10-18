@@ -1,0 +1,65 @@
+{
+    "title": "ভিডিও",
+    "curationId": "urn:bbc:vivo:curation:408a98e5-0dbf-4fb8-b17f-6151095f981c",
+    "curationType": "vivo-stream",
+    "link": "https://www.bbc.com/bengali/topics/cxy7jg418e7t",
+    "count": 4,
+    "articles": [
+        {
+            "id": "cw073z331lyxo",
+            "title": "দুর্গাপূজার সময় প্রতিমা ভাঙচুর: 'এটাতো আমাদের কালচার হয়ে গেছে'",
+            "description": "গত বছরের তুলনায় এবার বেড়েছে মণ্ডপের সংখ্যা। সরকার দিয়েছে চাওয়ার চেয়ে বাড়তি এক কোটি টাকার অনুদান। যদিও প্রতিবারের মতো এবারও ঘটেছে প্রতিমা ভাঙচুরের ঘটনা, যার মধ্যে আছে সিলেট, রাজবাড়ি, পঞ্চগড় ও টাঙ্গাইল। এসব ঘটনায় পূজা নিয়ে উচ্ছ্বাসের পাশাপাশি উদ্বেগের কথাও বলছিলেন কেউ কেউ।",
+            "link": "https://www.bbc.com/bengali/articles/cw073z331lyxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6883/live/3d2bb8a0-c643-11f1-9a39-31b474234113.jpg.webp",
+            "imageAlt": "দুর্গাপূজা: কী বলছেন হিন্দুরা?",
+            "category": "ভিডিও",
+            "type": "video",
+            "isLive": false,
+            "firstPublished": "2026-10-15T13:07:48.135Z",
+            "lastPublished": "2026-10-15T13:07:48.135Z",
+            "source": "BBC Bangla"
+        },
+        {
+            "id": "cm93z4p6rrxwo",
+            "title": "ঘরের কাজে পুরুষ: 'আলহামদুলিল্লাহ ভালো আছি'",
+            "description": "সামাজিকভাবে ঘরের বিষয় নারীদের প্রত্যাশা করা হলেও এমন অনেক পরিবার রয়েছে যেখানে পুরুষরা ঘরের কাজ করেন। সে চিত্রটা কেমন? এমন ক্ষেত্রে পার্থক্য কেমন হয়? ",
+            "link": "https://www.bbc.com/bengali/articles/cm93z4p6rrxwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8041/live/a6995e80-c66d-11f1-a64c-550be9e3c66b.jpg.webp",
+            "imageAlt": "ঘরের কাজে অংশ নেন এমন দুজন পুরুষ",
+            "category": "ভিডিও",
+            "type": "video",
+            "isLive": false,
+            "firstPublished": "2026-10-13T13:52:15.334Z",
+            "lastPublished": "2026-10-13T13:52:15.334Z",
+            "source": "BBC Bangla"
+        },
+        {
+            "id": "cx1l346g8l4vo",
+            "title": "ভাইরাল না হলে কি সমাধান নেই?",
+            "description": "ঘটনাগুলোয় দু'টো মিল আছে – প্রথমত, সবগুলো ঘটনাই ভাইরাল হয়েছে; আর দ্বিতীয়ত, ঘটনাগুলো ঘটার পর বেশ দ্রুততম সময়ে ব্যবস্থা নিয়েছে সরকার। কখনও প্রধানমন্ত্রীর নির্দেশে ভুক্তভোগীকে ছেড়ে দেওয়া হয়েছে, কখনও গাফলতির সঙ্গে সংশ্লিষ্ট কর্মকর্তাকে করা হয়েছে বরখাস্ত; এমনকি ফোন করে খোদ মন্ত্রী পর্যন্ত দুঃখপ্রকাশ করেছেন।",
+            "link": "https://www.bbc.com/bengali/articles/cx1l346g8l4vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/b5ad/live/f16d04a0-c0c5-11f1-bc2e-018d645d8d21.png.webp",
+            "imageAlt": "ভাইরাল করে দিতে হবে?",
+            "category": "ভিডিও",
+            "type": "video",
+            "isLive": false,
+            "firstPublished": "2026-10-06T06:02:29.911Z",
+            "lastPublished": "2026-10-06T06:02:29.911Z",
+            "source": "BBC Bangla"
+        },
+        {
+            "id": "cqlye7yg9pvyo",
+            "title": "'বলি যে আল্লাহ তুই নিয়ে যা'",
+            "description": "সবশেষ জ্বালানি তেলের দাম বৃদ্ধি, বড় আকারের বাজেট, সরকারি চাকরিতে পে-স্কেল, আমদানি খরচ ও কর, বিনিয়োগ ও কর্মসংস্থান সংকট, সব মিলে সাধারণ মানুষের উপর চাপ বাড়ছেই।",
+            "link": "https://www.bbc.com/bengali/articles/cqlye7yg9pvyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/b30f/live/6d054020-c16e-11f1-a64c-550be9e3c66b.png.webp",
+            "imageAlt": "চার জনের কোলাজ ",
+            "category": "ভিডিও",
+            "type": "video",
+            "isLive": false,
+            "firstPublished": "2026-10-06T05:44:02.651Z",
+            "lastPublished": "2026-10-06T05:44:02.651Z",
+            "source": "BBC Bangla"
+        }
+    ]
+}

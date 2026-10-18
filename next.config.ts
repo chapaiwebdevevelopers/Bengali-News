@@ -16,6 +16,17 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ichef.bbci.co.uk',
+        port: '',
+        pathname: '**',
+        search: '',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
