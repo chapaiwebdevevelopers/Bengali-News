@@ -1,8 +1,13 @@
-import Link from 'next/link';
-import Image from "next/image";
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArticleItem } from '@/types/news';
 
-const SingleCard = ({article}) => {
+interface SingleCardProps {
+  article: ArticleItem;
+}
+
+const SingleCard = ({ article }: SingleCardProps) => {
 //     console.log("singlecard",article)
     return (
          // single Card design below
@@ -15,7 +20,7 @@ const SingleCard = ({article}) => {
 
                                           <div  className="card bg-base-100 shadow-sm">
                                                 <figure>
-                                                      <Image alt={article.imageAlt} width={600} height={600}
+                                                      <Image alt={article.imageAlt || article.title || "সংবাদ"} width={600} height={600}
                                                             src={
                                                                   article.imageUrl
                                                             }

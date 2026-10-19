@@ -1,15 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import SingleCard from "./SingleCard";
+import { ArticleItem } from "@/types/news";
 
-const NewsCard = ({ news }) => {
+interface NewsCardProps {
+      news: {
+            articles?: ArticleItem[];
+            [key: string]: unknown;
+      };
+}
+
+const NewsCard = ({ news }: NewsCardProps) => {
       // console.log("prop",news)
-      const { articles } = news;
+      const articles = news?.articles || [];
       // console.log(articles)
       return (
             <>
-                  {articles.map((article) => 
+                  {articles.map((article: ArticleItem) => 
                        <SingleCard key={article.id} article={article}></SingleCard>
                   )}
             </>

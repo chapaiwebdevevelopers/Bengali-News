@@ -1,15 +1,16 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 import React from "react";
 import toast from "react-hot-toast";
 
 const SignInPage = () => {
-      const onSubmit = async (e: React.SubmitEvent<HTMLElement>) => {
+      const router = useRouter();
+      const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const formData = new FormData(e.target);
+            const formData = new FormData(e.currentTarget);
             const user = Object.fromEntries(formData.entries()) as {
                   email: string;
                   password: string;
@@ -23,21 +24,21 @@ const SignInPage = () => {
             });
             console.log("data", data);
             if (data) {
-                  toast.success("success");
-                  
+                  toast.success("সফলভাবে সাইন ইন হয়েছে");
+                  router.push("/");
             }
             if (error) {
-                  toast.error(error.message);
+                  toast.error(error.message || "সাইন ইন ব্যর্থ হয়েছে");
             }
       };
       const GooglesignIn = async () => {
-            const data = await authClient.signIn.social({
+            await authClient.signIn.social({
                   provider: "google",
             });
       };
 
       const GithubsignIn = async () => {
-            const data = await authClient.signIn.social({
+            await authClient.signIn.social({
                   provider: "github",
             });
       };

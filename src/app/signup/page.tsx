@@ -2,13 +2,14 @@
 import { authClient } from "@/lib/auth-client";
 
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 
 const SignUpPage = () => {
-      const onSubmit = async(e:React.SubmitEvent<HTMLElement>) => {
+      const router = useRouter();
+      const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const formData = new FormData(e.target);
+            const formData = new FormData(e.currentTarget);
             const user = Object.fromEntries(formData.entries()) as {name:string,email:string,password:string,image:string};
             // console.log(user);
             const { data, error } = await authClient.signUp.email({
@@ -22,19 +23,19 @@ const SignUpPage = () => {
             if (data){
                   console.log(data);
                   // you can add toast here 
-                  redirect("/")
+                  router.push("/");
             } else {
                   console.log(error)
             }
       };
             const GooglesignIn = async () => {
-                  const data = await authClient.signIn.social({
+                  await authClient.signIn.social({
                         provider: "google",
                   });
             };
       
             const GithubsignIn = async () => {
-                  const data = await authClient.signIn.social({
+                  await authClient.signIn.social({
                         provider: "github",
                   });
             };

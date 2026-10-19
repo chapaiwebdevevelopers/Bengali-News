@@ -1,20 +1,22 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const EditProfilePage = () => {
+      const router = useRouter();
       const { data: userData } = authClient.useSession();
 
-      const HandleUpdateProfile = async (e:React.SubmitEvent<HTMLElement>) => {
-        e.preventDefault()
-        const formData = new FormData(e.target)
-        const data =Object.fromEntries(formData.entries())
-        console.log(data)
+      const HandleUpdateProfile = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const data = Object.fromEntries(formData.entries());
+        console.log(data);
             await authClient.updateUser({
                   image: data.image as string,
                   name: data.name as string,
             });
+            router.push("/profile");
       };
 
       return (
@@ -30,13 +32,13 @@ const EditProfilePage = () => {
                                     type="text"
                                     name="name"
                                     className="input w-md"
-                                    placeholder={userData?.user.name}
+                                    placeholder={userData?.user.name || "নাম"}
                               />
                               <input
                                     type="url"
                                     name="image"
                                     className="input w-md"
-                                    placeholder={userData?.user.image}
+                                    placeholder={userData?.user.image || "ছবির লিঙ্ক"}
                               />
 
                               <button

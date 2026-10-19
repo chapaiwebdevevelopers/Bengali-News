@@ -1,7 +1,8 @@
 
 import Image from "next/image";
+import { ArticleDetail, ArticleBodyItem, ArticleTopic } from "@/types/news";
 
-async function getArticle(artId) {
+async function getArticle(artId: string): Promise<ArticleDetail | null> {
   const response = await fetch(
     `https://news-api-v2.vercel.app/api/article/${artId}`,
     { next: { revalidate: 300 } }
@@ -15,7 +16,11 @@ async function getArticle(artId) {
   return result.data;
 }
 
-export default async function PostDetailsPage({ params }) {
+interface PostDetailsPageProps {
+  params: Promise<{ artId: string }>;
+}
+
+export default async function PostDetailsPage({ params }: PostDetailsPageProps) {
   const { artId } = await params;
   const news = await getArticle(artId);
 
@@ -39,14 +44,6 @@ export default async function PostDetailsPage({ params }) {
         year: "numeric",
       })
     : "";
-
-  const description = news.description?.blocks
-    ?.flatMap((item) => item.model?.blocks || [])
-    .flatMap((item) => item.model?.blocks || [])
-    .map((item) => item.model?.text || "")
-    .filter(Boolean)
-    .join(" ");
-
   const tags = news.tags || [];
   const topics = news.topics || [];
   const body = news.body || [];
@@ -64,7 +61,7 @@ export default async function PostDetailsPage({ params }) {
             {/* Article Body */}
             <div className="article-content text-base leading-8 sm:text-lg sm:leading-9">
 
-              {body.map((item, index) => {
+              {body.map((item: ArticleBodyItem, index: number) => {
                 // Paragraph
                 if (item.type === "text") {
                   // Skip this specific promotional paragraph.
@@ -104,7 +101,7 @@ export default async function PostDetailsPage({ params }) {
                       <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-base-200">
                         <Image
                           src={item.url}
-                          alt={item.altText || item.caption || news.title}
+                          alt={item.altText || item.caption || news.title || "প্রতিবেদন ছবি"}
                           fill
                           sizes="(max-width: 768px) 100vw, 760px"
                           className="object-cover"
@@ -132,7 +129,7 @@ export default async function PostDetailsPage({ params }) {
                 </h2>
 
                 <div className="flex flex-wrap gap-2">
-                  {tags.map((tag, index) => (
+                  {tags.map((tag: string, index: number) => (
                     <span
                       key={`${tag}-${index}`}
                       className="badge badge-lg badge-ghost"
@@ -218,7 +215,7 @@ export default async function PostDetailsPage({ params }) {
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-                        {topics.map((topic) => (
+                        {topics.map((topic: ArticleTopic) => (
                           <span
                             key={topic.id}
                             className="badge badge-outline"

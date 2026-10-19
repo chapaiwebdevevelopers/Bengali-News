@@ -1,10 +1,8 @@
-import React from 'react';
-import { createContext } from 'vm';
+import React, { createContext } from 'react';
 
-const contentProvider= createContext()
+export const ContentContext = createContext<unknown>(null);
 
-
-const userContext = () => {
+const UserContext = () => {
     return (
         <div>
             
@@ -12,4 +10,4 @@ const userContext = () => {
     );
 };
 
-export default userContext;
+export default UserContext;

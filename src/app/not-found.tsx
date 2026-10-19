@@ -22,7 +22,7 @@ const NotFoundPage = () => {
           </h2>
 
           <p className="text-base-content/60 max-w-sm mt-2 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist or may have been
+            Sorry, the page you are looking for doesn&apos;t exist or may have been
             moved to another location.
           </p>
 

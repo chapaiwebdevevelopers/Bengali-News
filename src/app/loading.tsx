@@ -15,7 +15,7 @@ const LoadingPage = () => {
           </h2>
 
           <p className="text-base-content/60 text-sm mt-1">
-            We're preparing everything for you.
+            We&apos;re preparing everything for you.
           </p>
 
           {/* Loading Progress */}

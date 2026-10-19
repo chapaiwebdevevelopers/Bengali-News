@@ -1,6 +1,7 @@
 import MainNews from "@/components/MainNews";
 import MostRead from "@/components/MostRead";
 import NewsCard from "@/components/NewsCard";
+import { NewsSection } from "@/types/news";
 
 const removeCategory = [
       "বিবিসি বাংলা এখন হোয়াটসঅ্যাপে!",
@@ -12,13 +13,13 @@ export default async function Home() {
             "https://news-api-v2.vercel.app/api/news/sections",
       );
       const data = await res.json();
-      const sections = data.data;
+      const sections: NewsSection[] = data.data || [];
       // console.log(sections);
-      const mainSection = sections[0].articles;
+      const mainSection = sections[0]?.articles || [];
       // console.log(mainSection);
 
       // Remove the First Index from API
-      const [first, ...restSection] = sections;
+      const [, ...restSection] = sections;
       // console.log("check", restSection.articles);
       // console.log(restSection);
    
@@ -34,12 +35,12 @@ export default async function Home() {
                                     {/* The below using to help by AI  for removing 3 category */}
                                     {restSection
                                           .filter(
-                                                sec =>
+                                                (sec: NewsSection) =>
                                                       !removeCategory.includes(
                                                             sec.title,
                                                       ),
                                           )
-                                          .map((sec, index) => (
+                                          .map((sec: NewsSection, index: number) => (
                                                 <div
                                                       className="py-10"
                                                       key={index}
