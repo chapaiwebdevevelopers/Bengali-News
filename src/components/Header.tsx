@@ -1,9 +1,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import NavLinks from "./NavLinks";
-import Marquee from "./Marquee";
+import UserMenu from "./UserMenu";
+
 
 
 
@@ -28,11 +28,8 @@ const Header = () => {
                               </div>
                         </div>
 
-                        <div className="bg-white p-6 absolute right-4 space-x-2 ">
-                              <button className=" ">সাইন ইন</button>
-                              <button className="btn btn-error bg-red-700 text-white  ">
-                                    সাইন আপ
-                              </button>
+                        <div className="bg-white absolute right-4 space-x-2 ">
+                              <UserMenu></UserMenu>
                         </div>
                   </div>
                   <div className="mx-auto text-center">

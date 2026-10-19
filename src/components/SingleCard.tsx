@@ -6,7 +6,7 @@ const SingleCard = ({article}) => {
 //     console.log("singlecard",article)
     return (
          // single Card design below
-                        <div >
+                        <div  >
                              
                                     <Link 
                                           href={`/${article.type}/${article.id}`}
